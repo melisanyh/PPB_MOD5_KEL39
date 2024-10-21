@@ -1,0 +1,75 @@
+/* Container utama untuk seluruh profil */
+.profiles-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    padding: 20px;
+    background-color: #282c34;
+    min-height: 100vh;
+}
+
+/* Style untuk setiap profile card */
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 15px; /* Membuat sudut lebih halus */
+    width: 100%;
+    max-width: 300px; /* Maksimal lebar kartu */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Membuat shadow yang lebih tegas */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transisi lebih halus */
+    border: 2px solid transparent;
+}
+
+.profile-card:hover {
+    transform: translateY(-10px); /* Menambahkan efek hover yang menarik */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5); /* Shadow lebih besar saat hover */
+    border-color: #61dafb; /* Highlight border saat hover */
+}
+
+/* Gambar profil */
+.profile-card img {
+    width: 120px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 3px solid #61dafb; /* Menambahkan border pada gambar */
+    transition: transform 0.3s;
+}
+
+.profile-card:hover img {
+    transform: rotate(360deg); /* Efek rotasi pada gambar saat hover */
+}
+
+/* Nama profil */
+.profile-card h1 {
+    color: white;
+    font-size: 1.2rem; /* Mengurangi ukuran font agar lebih proporsional */
+    margin-bottom: 10px;
+    text-align: center;
+    text-transform: uppercase; /* Membuat nama huruf kapital semua */
+    letter-spacing: 1px;
+    min-height: 50px; /* Batas minimum tinggi teks untuk menjaga konsistensi */
+}
+
+/* Link ke GitHub */
+.profile-card a {
+    color: #61dafb;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-top: 10px;
+    transition: color 0.3s;
+}
+
+.profile-card a:hover {
+    color: #21a1f1;
+}
+
+/* Informasi followers */
+.profile-card p {
+    color: white;
+    font-size: 1rem;
+    margin-top: 10px;
+}
